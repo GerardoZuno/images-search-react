@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Error from './Error'
 
-function Form() {
+function Form({setSearch}) {
 
     const [termino, setTermino] = useState("")
     const [error, setError] = useState(false)
@@ -20,6 +20,7 @@ function Form() {
             return 
         }
         setError(false)
+        setSearch(termino)
 
     }
 
